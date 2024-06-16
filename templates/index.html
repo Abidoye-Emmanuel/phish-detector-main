@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <title>PhishSentinel</title>
+  </head>
+
+  <body>
+    <div class="main">
+<div class="header-txt">
+    <h1>PhishSentinel Detects Phishing and Scam Sites</h1>
+    <span>A web based detection system to check phisphed website using
+        Machine learning</span>
+</div>
+<div class="form">
+    <form id="data-form" name="url" method="POST">
+        <input class="search" type="text" id="url" name="url" placeholder="scan url:)">
+        <button class="search-btn"  type="submit">Submit</button>
+    </form>
+    {% if result %}
+    <div class="result">
+      {% if is_phishing %}
+      <p style="color: green;">{{ result }}✅</p>
+      {% else %}
+      <p style="color: red;">{{ result }}❌</p>
+      {% endif %}
+    </div>
+    {% endif %}
+</div>
+    </div>
+    
+  </body>
+</html>

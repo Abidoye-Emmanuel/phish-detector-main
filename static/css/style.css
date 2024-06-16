@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+body {
+  font-family: Inter, sans-serif;
+  background-color: #edf4f2;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.header-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-txt h1 {
+  font-family: "Inconsolata", monospace;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  color: #333;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search {
+  font-family: Inter;
+  font-size: 12px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  height: 35px;
+  line-height: normal;
+  color: #545454;
+  display: block;
+  width: 50%;
+  box-sizing: border-box;
+  user-select: auto;
+  padding: 0 6px;
+  padding-left: 12px;
+}
+
+.search::placeholder{
+   font-family: "Inconsolata", monospace;
+   font-size: 16px;
+}
+
+.search :focus {
+  border: 3px solid #5551ff;
+}
+
+.search-btn {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  font-family: "Inconsolata", monospace;
+  height: 35px;
+  cursor: pointer;
+  background: #000000;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 9px 24px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 200ms, background 200ms;
+}
+
+.search-btn:hover {
+  transform: translateY(-2px);
+}
+
+.result{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: Inter, sans-serif;
+}
+
+
+/* tablet */
+@media (max-width: 1024px) {
+.header-txt {
+   
+  }
+
+  .header-txt h1{
+    text-align: center;
+    justify-content: center;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+  }
+ 
+}
+
+/* phones */
+
+@media (max-width: 768px) {
+  .header-txt span{
+    text-align: center;
+    font-size: 14px;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+  }
+  .search{
+    width: 80%;
+  }
+}
+/* small phones */
+@media (max-width: 480px) {
+  
+}
